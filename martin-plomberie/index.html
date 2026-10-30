@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Plombier à Strasbourg, dépannage 7j/7 | Martin Plomberie</title>
-<meta name="description" content="Fuite, chauffe-eau, débouchage : intervention rapide à Strasbourg et alentours. Devis gratuit.">
+<meta name="description" content="Fuite, chauffe-eau, WC bouché : un plombier qui décroche à Strasbourg et dans l'Eurométropole. Devis gratuit.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Public+Sans:wght@400;600&display=swap">
 <link rel="stylesheet" href="style.css">
-<style>:root{--fond:#F4F6F8;--texte:#0E1A24;--accent:#2FB4FF;--accent-texte:#06121C;--doux:#E3EAF0;--police:"Figtree",system-ui,sans-serif}</style>
+<style>:root{--fond:#F3F5F5;--fond2:#E1E7E9;--texte:#1E2326;--accent:#8A6719;--chaud:#C2372E;--froid:#2B5FA8;--titre:"Big Shoulders Display",sans-serif;--police:"Public Sans",sans-serif}</style>
 </head>
 <body>
 <header class="nav">
@@ -17,70 +17,87 @@
   <a class="nav-tel" href="tel:+33000000000">03 00 00 00 00</a>
 </header>
 
+<main>
 <section class="hero" data-scrub="frames/" data-count="72">
   <div class="hero-colle">
     <canvas aria-hidden="true"></canvas>
     <div class="hero-voile"></div>
     <div class="hero-texte">
-      <p class="sur-titre">Plombier chauffagiste · Strasbourg · 7j/7</p>
-      <h1>La fuite s'arrête ici.</h1>
-      <p class="hero-sous">Dépannage, chauffe-eau, salle de bain : un plombier qui décroche, qui vient, et qui laisse propre.</p>
-      <div class="hero-boutons">
-        <a class="btn btn-accent" href="tel:+33000000000">Appeler maintenant</a>
-        <a class="btn btn-ligne" href="#devis">Devis gratuit</a>
-      </div>
+      <p class="hero-qui">Martin Plomberie. Plombier chauffagiste à Strasbourg, on décroche 7 jours sur 7.</p>
+      <a class="hero-numero" href="tel:+33000000000">03 00 00 00 00</a>
+      <h1>Une fuite ? Appelez, on vient.</h1>
     </div>
-    <ol class="hero-etapes">
-      <li data-from="0.3" data-to="0.55"><span>01 — APPEL</span>Vous appelez. On décroche.</li><li data-from="0.55" data-to="0.8"><span>02 — DIAGNOSTIC</span>On trouve la panne, prix annoncé avant.</li><li data-from="0.8" data-to="2"><span>03 — RÉPARÉ</span>C'est réparé. C'est propre.</li>
+    <ol class="hero-etapes" aria-hidden="true">
+      <li data-from="0.32" data-to="0.56"><b>1. Vous appelez</b>On décroche.</li><li data-from="0.56" data-to="0.8"><b>2. On cherche</b>Prix annoncé avant de toucher à quoi que ce soit.</li><li data-from="0.8" data-to="2"><b>3. C'est réparé</b>Et c'est propre.</li>
     </ol>
   </div>
 </section>
 
-<section class="bloc reveal" id="services">
-  <p class="sur-titre">Ce qu'on fait</p>
-  <h2>Tout ce qui touche à l'eau, sans mauvaise surprise.</h2>
-  <div class="grille">
-    <article class="carte"><h3>Dépannage urgent</h3><p>Fuite, dégât des eaux, WC bouché : on intervient vite.</p></article><article class="carte"><h3>Chauffe-eau</h3><p>Remplacement, entretien, ballon thermodynamique.</p></article><article class="carte"><h3>Salle de bain</h3><p>Douche à l'italienne, remplacement baignoire, robinetterie.</p></article><article class="carte"><h3>Débouchage</h3><p>Canalisations, évier, colonne : sans casse quand c'est possible.</p></article>
+<section class="diag" id="diagnostic">
+  <div class="diag-tete">
+    <h2>Où est le problème ?</h2>
+    <p>Deux clics et vous savez si c'est urgent. Le message pour nous est déjà écrit.</p>
   </div>
+  <div class="diag-corps">
+    <fieldset><legend>1. La pièce</legend><div class="diag-choix" data-pieces></div></fieldset>
+    <fieldset data-etape-pannes hidden><legend>2. Ce qui se passe</legend><div class="diag-choix" data-pannes></div></fieldset>
+    <div class="diag-resultat" data-resultat hidden aria-live="polite">
+      <p class="diag-verdict" data-verdict></p>
+      <div class="diag-actions">
+        <a class="btn btn-plein" href="tel:+33000000000">Appeler</a>
+        <a class="btn btn-ligne" data-wa href="https://wa.me/33000000000">Envoyer sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <script type="application/json" id="diag-data">{"titre":"Où est le problème ?","intro":"Deux clics et vous savez si c'est urgent. Le message pour nous est déjà écrit.","verdicts":{"urgence":"C'est urgent : on vient aujourd'hui.","planifier":"Rien de grave : on cale un rendez-vous."},"pieces":[{"nom":"Cuisine","pannes":[{"nom":"Fuite sous l'évier","urgence":true},{"nom":"Évier bouché","urgence":false},{"nom":"Robinet qui goutte","urgence":false}]},{"nom":"Salle de bain","pannes":[{"nom":"Fuite ou dégât des eaux","urgence":true},{"nom":"Douche qui s'écoule mal","urgence":false},{"nom":"Refaire la salle de bain","urgence":false}]},{"nom":"WC","pannes":[{"nom":"WC bouché","urgence":true},{"nom":"Chasse qui coule en continu","urgence":false}]},{"nom":"Chauffe-eau","pannes":[{"nom":"Plus d'eau chaude","urgence":true},{"nom":"Ballon qui fuit","urgence":true},{"nom":"Le remplacer","urgence":false}]}]}</script>
 </section>
 
-<section class="bloc bloc-sombre reveal">
-  <p class="sur-titre">Comment ça se passe</p>
-  <h2>Trois étapes, zéro flou.</h2>
-  <ol class="etapes">
-    <li><span>1</span><h3>Vous décrivez</h3><p>Par téléphone, WhatsApp ou le formulaire, avec une photo si possible.</p></li><li><span>2</span><h3>On chiffre</h3><p>Un prix clair avant de commencer. Vous validez, ou pas.</p></li><li><span>3</span><h3>On répare</h3><p>Travail propre, chantier nettoyé, facture détaillée.</p></li>
+<section class="travaux" id="travaux">
+  <h2>Tout ce qui touche à l'eau.</h2>
+  <ul class="tuyau">
+    <li><h3>Dépannage</h3><p>Fuite, dégât des eaux, canalisation bouchée. On vient vite et on coupe ce qu'il faut couper.</p></li><li><h3>Chauffe-eau</h3><p>Remplacement, entretien, détartrage, ballon thermodynamique.</p></li><li><h3>Salle de bain</h3><p>Douche à l'italienne, remplacement de baignoire, robinetterie, de la dépose à la finition.</p></li><li><h3>Débouchage</h3><p>Évier, WC, colonne d'immeuble. Sans casser quand c'est possible.</p></li>
+  </ul>
+</section>
+
+<figure class="photo-pleine">
+  <img src="photo.webp" alt="Plombier qui raccorde un collecteur d'eau" loading="lazy">
+  <figcaption>Raccordement d'un collecteur, rénovation à Strasbourg (image d'illustration).</figcaption>
+</figure>
+
+<section class="methode">
+  <h2>Trois étapes, pas de flou.</h2>
+  <ol>
+    <li><span>1</span><h3>Vous décrivez</h3><p>Par téléphone, WhatsApp ou ici, avec une photo si possible.</p></li><li><span>2</span><h3>On chiffre</h3><p>Un prix clair avant de commencer. Vous validez, ou pas.</p></li><li><span>3</span><h3>On répare</h3><p>Chantier nettoyé, facture détaillée.</p></li>
   </ol>
 </section>
 
-<section class="bloc reveal">
-  <p class="sur-titre">Zone d'intervention</p>
-  <h2>Strasbourg et l'Eurométropole.</h2>
-  <ul class="villes"><li>Strasbourg</li><li>Schiltigheim</li><li>Illkirch</li><li>Lingolsheim</li><li>Bischheim</li><li>Ostwald</li><li>Hoenheim</li></ul>
-</section>
-
-<section class="bloc bloc-accent reveal" id="devis">
-  <p class="sur-titre">Devis gratuit</p>
-  <h2>Décrivez votre souci, on vous rappelle.</h2>
+<section class="contact" id="devis">
+  <div>
+    <h2>Décrivez le souci, on vous rappelle.</h2>
+    <p class="zone">On intervient à Strasbourg, Schiltigheim, Illkirch, Lingolsheim, Bischheim, Ostwald et Hoenheim.</p>
+  </div>
   <form class="form" onsubmit="event.preventDefault();this.querySelector('.form-note').hidden=false">
     <label>Votre nom<input name="nom" autocomplete="name" required></label>
     <label>Téléphone<input name="tel" type="tel" autocomplete="tel" required></label>
-    <label>Votre besoin<textarea name="besoin" rows="3" placeholder="Ex : fuite sous l'évier depuis ce matin"></textarea></label>
-    <button class="btn btn-sombre" type="submit">Être rappelé</button>
+    <label>Le problème<textarea name="besoin" rows="3" placeholder="Ex : fuite sous l'évier depuis ce matin"></textarea></label>
+    <label>Une photo, si vous pouvez<input name="photo" type="file" accept="image/*"></label>
+    <button class="btn btn-plein" type="submit">Être rappelé</button>
     <p class="form-note" hidden>Site de démonstration : aucun message n'est envoyé.</p>
   </form>
 </section>
+</main>
 
 <footer class="pied">
-  <p><strong>Martin Plomberie</strong> · Strasbourg</p>
-  <p class="demo">Site de démonstration conçu par uydaa — concept, entreprise fictive.</p>
+  <p>Martin Plomberie, Strasbourg</p>
+  <p class="demo">Site de démonstration conçu par uydaa. Entreprise fictive.</p>
 </footer>
 
 <nav class="barre-mobile" aria-label="Contact rapide">
   <a href="tel:+33000000000">Appeler</a>
   <a href="https://wa.me/33000000000">WhatsApp</a>
-  <a href="#devis" class="accent">Devis</a>
 </nav>
 
 <script src="scrub.js"></script>
+<script src="diagnostic.js"></script>
 </body>
 </html>
